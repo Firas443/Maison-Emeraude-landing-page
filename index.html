@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="Maison Émeraude — premium fine dining experience." />
+  <title>Maison Émeraude — Fine Dining</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300,400,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" id="top" data-header>
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Maison Émeraude home">
+        <span class="brand__mark" aria-hidden="true">ME</span>
+        <span class="brand__text">
+          <span class="brand__name">Maison Émeraude</span>
+          <span class="brand__tag">Tasting • À la carte • Wine</span>
+        </span>
+      </a>
+
+      <div class="nav__desktop">
+        <a class="nav__link" href="#about">Story</a>
+        <a class="nav__link" href="#menu">Menu</a>
+        <a class="nav__link" href="#gallery">Gallery</a>
+        <a class="nav__link" href="#chef">Chef</a>
+        <a class="nav__link" href="#reserve">Reserve</a>
+
+        <button class="btn btn--ghost js-open-menu ripple" type="button" data-ripple>Full Menu</button>
+        <a class="btn btn--primary ripple" href="#reserve" data-ripple>Reserve</a>
+      </div>
+
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navPanel">
+        <span class="nav__toggleLines" aria-hidden="true"></span>
+      </button>
+    </nav>
+
+    <div class="navPanel container" id="navPanel" aria-hidden="true">
+      <a class="navPanel__link" href="#about">Story</a>
+      <a class="navPanel__link" href="#menu">Menu</a>
+      <a class="navPanel__link" href="#gallery">Gallery</a>
+      <a class="navPanel__link" href="#chef">Chef</a>
+      <a class="navPanel__link" href="#reviews">Reviews</a>
+      <a class="navPanel__link" href="#reserve">Reserve</a>
+      <div class="navPanel__cta">
+        <button class="btn btn--ghost js-open-menu ripple" type="button" data-ripple>Full Menu</button>
+        <a class="btn btn--primary ripple" href="#reserve" data-ripple>Reserve</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" aria-label="Hero">
+      <div class="hero__media" aria-hidden="true">
+        <div class="hero__slide is-active" data-hero-slide style="background-image:url('images/hero-1.png')"></div>
+        <div class="hero__slide" data-hero-slide style="background-image:url('images/hero-2.jpg')"></div>
+        <div class="hero__slide" data-hero-slide style="background-image:url('images/hero-3.jpg')"></div>
+        <div class="hero__overlay"></div>
+        <div class="hero__grain"></div>
+      </div>
+
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <div class="hero__badge reveal">
+            <span class="badgeDot" aria-hidden="true"></span>
+            Michelin-inspired tasting • limited seats
+          </div>
+
+          <h1 class="hero__title reveal">
+            An emerald night,
+            <span class="hero__titleEm">crafted course by course.</span>
+          </h1>
+
+          <p class="hero__subtitle reveal">
+            Modern fine dining with a warm, intimate room. Smoke, citrus, herb notes plated with restraint,
+            served with theatrical calm.
+          </p>
+
+          <div class="hero__actions reveal">
+            <a class="btn btn--primary btn--lg ripple" href="#reserve" data-ripple>Reserve a Table</a>
+            <button class="btn btn--ghost btn--lg js-open-menu ripple" type="button" data-ripple>View Menu</button>
+          </div>
+
+          <div class="hero__highlights reveal" role="list" aria-label="Highlights">
+            <div class="chip" role="listitem"><span>Open kitchen</span></div>
+            <div class="chip" role="listitem"><span>7-course tasting</span></div>
+            <div class="chip" role="listitem"><span>Wine pairing</span></div>
+            <div class="chip" role="listitem"><span>Vegetarian options</span></div>
+          </div>
+        </div>
+
+        <aside class="hero__book reveal" aria-label="Quick reservation widget">
+          <div class="bookCard">
+            <div class="bookCard__top">
+              <p class="eyebrow">Reserve</p>
+              <p class="bookCard__title">Find a table</p>
+            </div>
+
+            <form class="bookForm" id="quickReserve" novalidate>
+              <div class="bookRow">
+                <label class="srOnly" for="qrDate">Date</label>
+                <input id="qrDate" type="date" required />
+                <label class="srOnly" for="qrTime">Time</label>
+                <input id="qrTime" type="time" required />
+              </div>
+
+              <div class="bookRow">
+                <label class="srOnly" for="qrGuests">Guests</label>
+                <select id="qrGuests" required>
+                  <option value="">Guests</option>
+                  <option>1</option><option>2</option><option>3</option><option>4</option>
+                  <option>5</option><option>6</option><option>7</option><option>8</option>
+                </select>
+
+                <button class="btn btn--primary ripple" type="submit" data-ripple>
+                  Check availability
+                </button>
+              </div>
+
+              <p class="bookHint" id="quickHint" aria-live="polite"></p>
+            </form>
+
+            <div class="bookCard__meta">
+              <div class="metaLine"><span>Hours</span><strong>18:00 — 00:00</strong></div>
+              <div class="metaLine"><span>Dress</span><strong>Elegant</strong></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <button class="hero__scroll" type="button" aria-label="Scroll to about section">
+        <span class="hero__scrollLine" aria-hidden="true"></span>
+        <span>Discover the story</span>
+      </button>
+    </section>
+
+    <div class="paper">
+      <section class="section" id="about" aria-label="About">
+        <div class="container split">
+          <div class="split__text reveal">
+            <p class="eyebrow">Story</p>
+            <h2 class="h2">Quiet luxury. Bold flavor.</h2>
+            <p class="lead">
+              At Maison Émeraude, luxury is restraint: perfect ingredients, confident technique, and a rhythm that feels effortless.
+            </p>
+            <p class="muted">
+              Our menu follows the season greens, smoke, citrus, and gold. Each plate balances comfort with surprise,
+              designed to feel like a memory while you’re still living it.
+            </p>
+
+            <div class="stats" role="list" aria-label="Restaurant facts">
+              <div class="stat" role="listitem">
+                <span class="stat__n">14</span>
+                <span class="stat__l">seats per service</span>
+              </div>
+              <div class="stat" role="listitem">
+                <span class="stat__n">7</span>
+                <span class="stat__l">signature courses</span>
+              </div>
+              <div class="stat" role="listitem">
+                <span class="stat__n">1</span>
+                <span class="stat__l">open kitchen</span>
+              </div>
+            </div>
+
+            <a class="textLink" href="#menu">Explore menu preview <span aria-hidden="true">→</span></a>
+          </div>
+
+          <div class="split__media reveal">
+            <figure class="frame">
+              <img src="images/hero-1.png" alt="Elegant dining ambience with warm lighting." loading="lazy" />
+              <figcaption>Warm light, calm energy, every detail intentional.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="menu" aria-label="Menu preview">
+        <div class="container">
+          <div class="sectionHead reveal">
+            <p class="eyebrow">Menu</p>
+            <h2 class="h2">Signature plates</h2>
+            <p class="muted">A curated preview  the full menu evolves daily with the market.</p>
+          </div>
+
+          <div class="menuTabs reveal" role="tablist" aria-label="Menu categories">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="mains">Mains</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-tab="small">Small Bites</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-tab="chef">Chef’s Tasting</button>
+          </div>
+
+          <div class="menuGrid" data-panel="mains">
+            <article class="menuCard reveal" tabindex="0">
+              <img src="images/dish-1.jpg" alt="Seared salmon on emerald purée." loading="lazy">
+              <div class="menuCard__body">
+                <div class="menuCard__top">
+                  <h3>Charred Salmon, Emerald Purée</h3>
+                  <span class="price">$34</span>
+                </div>
+                <p>Herb crust • sweet pepper relish • citrus oil</p>
+                <div class="menuCard__actions">
+                  <button class="iconBtn ripple js-fav" type="button" data-ripple aria-label="Save dish">♥</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="menuCard reveal" tabindex="0">
+              <img src="images/dish-4.jpg" alt="Pasta dish in a moody setting." loading="lazy">
+              <div class="menuCard__body">
+                <div class="menuCard__top">
+                  <h3>Silk Ribbons, Butter & Herb</h3>
+                  <span class="price">$28</span>
+                </div>
+                <p>Velvet sauce • fruit notes • clean finish</p>
+                <div class="menuCard__actions">
+                  <button class="iconBtn ripple js-fav" type="button" data-ripple aria-label="Save dish">♥</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="menuCard reveal" tabindex="0">
+              <img src="images/dish-3.jpg" alt="Steaming broth being poured." loading="lazy">
+              <div class="menuCard__body">
+                <div class="menuCard__top">
+                  <h3>Steam & Citrus Broth</h3>
+                  <span class="price">$18</span>
+                </div>
+                <p>Slow infusion • lime • aromatic garnish</p>
+                <div class="menuCard__actions">
+                  <button class="iconBtn ripple js-fav" type="button" data-ripple aria-label="Save dish">♥</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="menuCard reveal" tabindex="0">
+              <img src="images/dish-2.jpg" alt="Grilled skewers with herb sauce." loading="lazy">
+              <div class="menuCard__body">
+                <div class="menuCard__top">
+                  <h3>Fire-Kissed Skewers</h3>
+                  <span class="price">$22</span>
+                </div>
+                <p>Char • lemon • green herb sauce</p>
+                <div class="menuCard__actions">
+                  <button class="iconBtn ripple js-fav" type="button" data-ripple aria-label="Save dish">♥</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="menuGrid is-hidden" data-panel="small">
+            <article class="menuLine reveal">
+              <div>
+                <h4>Black pepper calamari</h4>
+                <p>citrus aioli • crisp herbs</p>
+              </div>
+              <span class="price">$16</span>
+            </article>
+            <article class="menuLine reveal">
+              <div>
+                <h4>Warm focaccia cloud</h4>
+                <p>salted butter • honey glaze</p>
+              </div>
+              <span class="price">$12</span>
+            </article>
+            <article class="menuLine reveal">
+              <div>
+                <h4>Green garden salad</h4>
+                <p>lemon vinaigrette • toasted seeds</p>
+              </div>
+              <span class="price">$14</span>
+            </article>
+          </div>
+
+          <div class="menuGrid is-hidden" data-panel="chef">
+            <div class="tasting reveal">
+              <div class="tasting__left">
+                <h3>Chef’s Tasting (7 courses)</h3>
+                <p class="muted">
+                  A slow crescendo of smoke, citrus, and silk — designed as one complete experience.
+                </p>
+                <ul class="tasting__list" role="list">
+                  <li><span>Amuse — emerald mist</span><span>$12</span></li>
+                  <li><span>Charred greens • sesame</span><span>$16</span></li>
+                  <li><span>Steam & citrus broth</span><span>$18</span></li>
+                  <li><span>Fire-kissed plate</span><span>$22</span></li>
+                  <li><span>Chef’s main course</span><span>$34</span></li>
+                  <li><span>Silk pasta moment</span><span>$28</span></li>
+                  <li><span>Golden finale</span><span>$14</span></li>
+                </ul>
+              </div>
+              <div class="tasting__right">
+                <div class="tasting__card">
+                  <p class="eyebrow">Pairing</p>
+                  <h4>Wine pairing</h4>
+                  <p class="muted">Curated in-house to mirror each course.</p>
+                  <button class="btn btn--primary ripple js-open-menu" type="button" data-ripple>View Full Menu</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta reveal">
+            <div>
+              <h3 class="h3">See the full menu presentation</h3>
+              <p class="muted">Open the complete tasting & à la carte menu beautifully formatted.</p>
+            </div>
+            <div class="cta__actions">
+              <button class="btn btn--primary ripple js-open-menu" type="button" data-ripple>Full Menu</button>
+              <a class="btn btn--ghost ripple" href="#reserve" data-ripple>Reserve</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="gallery" aria-label="Gallery">
+        <div class="container">
+          <div class="sectionHead reveal">
+            <p class="eyebrow">Gallery</p>
+            <h2 class="h2">Atmosphere & plates</h2>
+            <p class="muted">Tap to open — cinematic, intimate, and warm.</p>
+          </div>
+
+          <div class="masonry" role="list">
+            <button class="masonry__item reveal js-lightbox" type="button" data-src="images/gallery-1.png" data-alt="Elegant dining ambience." role="listitem">
+              <img src="images/gallery-1.png" alt="Elegant dining ambience." loading="lazy" />
+            </button>
+            <button class="masonry__item reveal js-lightbox" type="button" data-src="images/gallery-2.jpg" data-alt="Seared salmon plate." role="listitem">
+              <img src="images/gallery-2.jpg" alt="Seared salmon plate." loading="lazy" />
+            </button>
+            <button class="masonry__item reveal js-lightbox" type="button" data-src="images/gallery-3.jpg" data-alt="Guest enjoying skewers." role="listitem">
+              <img src="images/gallery-3.jpg" alt="Guest enjoying skewers." loading="lazy" />
+            </button>
+            <button class="masonry__item reveal js-lightbox" type="button" data-src="images/gallery-4.jpg" data-alt="Broth poured tableside." role="listitem">
+              <img src="images/gallery-4.jpg" alt="Broth poured tableside." loading="lazy" />
+            </button>
+            <button class="masonry__item reveal js-lightbox" type="button" data-src="images/gallery-5.jpg" data-alt="Pasta & wine in moody light." role="listitem">
+              <img src="images/gallery-5.jpg" alt="Pasta & wine in moody light." loading="lazy" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="chef" aria-label="Chef">
+        <div class="container split split--reverse">
+          <div class="split__text reveal">
+            <p class="eyebrow">Chef</p>
+            <h2 class="h2">Technique with soul</h2>
+            <p class="lead">
+              Chef Amine Rahal blends modern precision with a warm, human table — confident, calm, unforgettable.
+            </p>
+            <p class="muted">
+              “Luxury isn’t loud. It’s accurate.” Our open kitchen invites you to watch restraint become beauty.
+            </p>
+
+            <div class="quote reveal">
+              <p class="quote__text">“The plate should feel like silence then surprise you.”</p>
+              <p class="quote__by">— Chef Amine</p>
+            </div>
+          </div>
+
+          <div class="split__media reveal">
+            <figure class="frame frame--tall">
+              <img src="images/chef.jpg" alt="Chef team moment." loading="lazy" />
+              <figcaption>Open-kitchen energy plated with restraint.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="reviews" aria-label="Reviews">
+        <div class="container">
+          <div class="sectionHead reveal">
+            <p class="eyebrow">Reviews</p>
+            <h2 class="h2">Guests leave glowing</h2>
+          </div>
+
+          <div class="reviewShell reveal" aria-live="polite">
+            <div class="review is-active">
+              <div class="stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+              <p class="review__text">“Every plate felt like cinema. Quiet, confident, and unbelievably delicious.”</p>
+              <p class="review__meta">Nadia K. — Anniversary dinner</p>
+            </div>
+            <div class="review">
+              <div class="stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+              <p class="review__text">“The pacing, the lighting, the flavors — this is what premium actually means.”</p>
+              <p class="review__meta">Sami B. — Chef’s tasting</p>
+            </div>
+            <div class="review">
+              <div class="stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+              <p class="review__text">“Smoke + citrus + herb notes. The balance is unreal.”</p>
+              <p class="review__meta">Lina A. — Late seating</p>
+            </div>
+
+            <div class="reviewNav">
+              <button class="iconBtn ripple js-prev-review" type="button" data-ripple aria-label="Previous review">←</button>
+              <button class="iconBtn ripple js-next-review" type="button" data-ripple aria-label="Next review">→</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="reserve" aria-label="Reservation">
+        <div class="container">
+          <div class="sectionHead reveal">
+            <p class="eyebrow">Reservation</p>
+            <h2 class="h2">Reserve your table</h2>
+            <p class="muted">No backend — elegant validation + success animation.</p>
+          </div>
+
+          <div class="reserveGrid">
+            <form class="reserveCard reveal" id="reserveForm" novalidate>
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="e.g., Amna M." required />
+                <p class="hint" aria-live="polite"></p>
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="MaisonEmeraude@example.com" required />
+                <p class="hint" aria-live="polite"></p>
+              </div>
+
+              <div class="row">
+                <div class="field">
+                  <label for="date">Date</label>
+                  <input id="date" name="date" type="date" required />
+                  <p class="hint" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label for="time">Time</label>
+                  <input id="time" name="time" type="time" required />
+                  <p class="hint" aria-live="polite"></p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="field">
+                  <label for="guests">Guests</label>
+                  <select id="guests" name="guests" required>
+                    <option value="">Select</option>
+                    <option>1</option><option>2</option><option>3</option><option>4</option>
+                    <option>5</option><option>6</option><option>7</option><option>8</option>
+                    <option>9</option><option>10</option><option>11</option><option>12</option>
+                  </select>
+                  <p class="hint" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label for="occasion">Occasion <span class="muted">(optional)</span></label>
+                  <input id="occasion" name="occasion" type="text" placeholder="Anniversary, birthday..." />
+                </div>
+              </div>
+
+              <div class="actions">
+                <button class="btn btn--primary btn--lg ripple" type="submit" data-ripple>Confirm</button>
+                <button class="btn btn--ghost btn--lg ripple js-open-menu" type="button" data-ripple>Full Menu</button>
+              </div>
+
+              <p class="muted smallNote">Tip: Tell us allergies — we’ll tailor your night.</p>
+            </form>
+
+            <aside class="reserveAside reveal">
+              <div class="infoBox">
+                <h3 class="h3">Tonight’s service</h3>
+                <p class="muted">Two seatings • calm atmosphere • limited capacity</p>
+                <ul class="list" role="list">
+                  <li>Vegetarian options</li>
+                  <li>Wine pairing available</li>
+                  <li>Accessible seating</li>
+                </ul>
+                <div class="divider" aria-hidden="true"></div>
+                <p class="muted"><strong>Phone:</strong> +216 71 000 000</p>
+              </div>
+
+              <div class="infoImage">
+                <img src="images/hero-2.jpg" alt="Steaming bowl finished tableside." loading="lazy" />
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="location" aria-label="Location">
+        <div class="container">
+          <div class="sectionHead reveal">
+            <p class="eyebrow">Location</p>
+            <h2 class="h2">Find us in the heart of the city</h2>
+          </div>
+
+          <div class="locationGrid">
+            <div class="locCard reveal">
+              <h3 class="h3">Maison Émeraude</h3>
+              <p class="muted">21 Rue des Arts, Downtown<br/>Tunis, Tunisia</p>
+
+              <div class="locRows" role="list">
+                <div class="locRow" role="listitem"><span>Phone</span><strong>+216 71 000 000</strong></div>
+                <div class="locRow" role="listitem"><span>Email</span><strong>maisonemeraude@gmail.com</strong></div>
+              </div>
+
+              <div class="hours">
+                <h4>Opening hours</h4>
+                <div class="locRow"><span>Mon–Thu</span><strong>18:00 — 23:30</strong></div>
+                <div class="locRow"><span>Fri–Sat</span><strong>18:00 — 00:00</strong></div>
+                <div class="locRow"><span>Sun</span><strong>Closed</strong></div>
+              </div>
+
+              <div class="actionsRow">
+                <a class="btn btn--primary ripple" href="#reserve" data-ripple>Reserve</a>
+                <button class="btn btn--ghost ripple js-copy-address" type="button" data-ripple>Copy address</button>
+              </div>
+            </div>
+
+            <div class="map reveal" aria-label="Map placeholder">
+              <div class="map__top">
+                <span class="badge"><span class="badgeDot badgeDot--gold" aria-hidden="true"></span> Map placeholder</span>
+                <button class="iconBtn ripple js-open-maps" type="button" data-ripple aria-label="Open maps">↗</button>
+              </div>
+              <div class="map__frame" role="img" aria-label="Google Map placeholder">
+                <div class="map__grid" aria-hidden="true"></div>
+                <div class="map__pin" aria-hidden="true"></div>
+                <div class="map__hint">Embed Google Maps iframe here in production.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer" aria-label="Footer">
+        <div class="container footer__inner">
+          <div>
+            <div class="brand brand--footer">
+              <span class="brand__mark" aria-hidden="true">ME</span>
+              <span class="brand__text">
+                <span class="brand__name">Maison Émeraude</span>
+                <span class="brand__tag">Fine Dining • Chef’s Atelier</span>
+              </span>
+            </div>
+            <p class="muted footer__note">A modern tasting experience — cinematic, intimate, unforgettable.</p>
+          </div>
+
+          <div class="footer__right">
+            <div class="social" aria-label="Social links">
+              <a class="social__icon ripple" href="#" aria-label="Instagram" data-ripple>⌁</a>
+              <a class="social__icon ripple" href="#" aria-label="TikTok" data-ripple>⟡</a>
+              <a class="social__icon ripple" href="#" aria-label="Facebook" data-ripple>◌</a>
+            </div>
+            <p class="footer__copy">© <span id="year"></span> Maison Émeraude</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <div class="modal" id="menuModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="menuTitle">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel" role="document">
+      <div class="modal__head">
+        <div>
+          <p class="eyebrow">Full Menu</p>
+          <h3 class="h3" id="menuTitle">Tasting & À la carte</h3>
+        </div>
+        <button class="iconBtn ripple" type="button" aria-label="Close menu" data-close-modal data-ripple>✕</button>
+      </div>
+
+      <div class="modal__body">
+        <div class="menuCols">
+          <section class="menuBlock">
+            <h4 class="menuBlock__title">Chef’s Tasting (7)</h4>
+            <ul class="menuList" role="list">
+              <li><span>Emerald amuse • citrus mist</span><span>$12</span></li>
+              <li><span>Charred greens • sesame • lime</span><span>$16</span></li>
+              <li><span>Steam & citrus broth</span><span>$18</span></li>
+              <li><span>Fire-kissed skewers • herb sauce</span><span>$22</span></li>
+              <li><span>Chef’s main course</span><span>$34</span></li>
+              <li><span>Silk pasta • butter finish</span><span>$28</span></li>
+              <li><span>Golden finale • seasonal sweet</span><span>$14</span></li>
+            </ul>
+          </section>
+
+          <section class="menuBlock">
+            <h4 class="menuBlock__title">À la carte</h4>
+            <ul class="menuList" role="list">
+              <li><span>Small bites</span><span>$11–$19</span></li>
+              <li><span>Signature plates</span><span>$22–$38</span></li>
+              <li><span>Desserts</span><span>$12–$16</span></li>
+              <li><span>Pairings</span><span>$18–$44</span></li>
+            </ul>
+
+            <div class="menuNote" role="note">
+              Menu changes daily based on availability. Allergies? Tell us — we’ll tailor your night.
+            </div>
+
+            <div class="menuActions">
+              <a class="btn btn--primary ripple" href="#reserve" data-close-modal data-ripple>Reserve now</a>
+              <button class="btn btn--ghost ripple" type="button" data-close-modal data-ripple>Close</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <div class="lightbox__backdrop" data-close-lightbox></div>
+    <div class="lightbox__panel" role="document">
+      <button class="iconBtn ripple lightbox__close" type="button" aria-label="Close image" data-close-lightbox data-ripple>✕</button>
+      <button class="iconBtn ripple lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous image" data-ripple>←</button>
+
+      <figure class="lightbox__figure">
+        <img id="lightboxImg" alt="" />
+        <figcaption id="lightboxCap" class="lightbox__cap"></figcaption>
+      </figure>
+
+      <button class="iconBtn ripple lightbox__nav lightbox__nav--next" type="button" aria-label="Next image" data-ripple>→</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+    <div class="toast__dot" aria-hidden="true"></div>
+    <div class="toast__text" id="toastText">Saved.</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
