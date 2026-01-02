@@ -2,6 +2,8 @@
 > A stylish and responsive landing page for **Maison Émeraude**, a fine-dining restaurant concept.  
 > Built with semantic HTML, modern CSS, and interactive JavaScript features.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-1cc29f?style=for-the-badge)](https://firas443.github.io/Maison-Emeraude-landing-page/)
+
 ---
 
 ## 📍 About
