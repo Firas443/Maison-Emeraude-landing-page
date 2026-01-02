@@ -45,4 +45,4 @@ Maison-Emeraude-landing-page/
 
 #1. Clone repository:
 ```bash
-git clone https://github.com/Firas443/Maison-Emeraude-landing-page.git
+git clone https://github.com/firas443/Maison-Emeraude-landing-page.git
