@@ -30,7 +30,7 @@ This landing page is perfect for a **portfolio showcase**, live demo on GitHub P
 
 ## 🗂️ Project Structure
 Maison-Emeraude-landing-page/
-├── index.html # Main landing page
+├── index.html
 ├── style.css
 ├── script.js 
 ├── assets/ # Images and icons
